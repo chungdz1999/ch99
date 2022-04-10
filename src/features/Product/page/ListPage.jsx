@@ -5,6 +5,7 @@ import productApi from '../../../api/productApi';
 import ProductFilters from '../components/ProductFilters';
 import ProductList from '../components/ProductList';
 import ProductLoadingList from '../components/ProductLoadingList';
+import ResearchProductList from '../components/ResearchProductList';
 
 ListPage.propTypes = {};
 
@@ -52,6 +53,15 @@ function ListPage(props) {
         }));
     };
 
+    const handleSearch = (newValue) => {
+        console.log('hehe', newValue);
+        setFilters((prev) => ({
+            ...prev,
+            _page: 1,
+            name_like: newValue.searchTerm,
+        }));
+    };
+
     return (
         <Box sx={{
             marginTop: 1,
@@ -64,6 +74,7 @@ function ListPage(props) {
                         </Paper>
                     </Grid>
                     <Grid item xs={10} >
+                        <ResearchProductList onSubmit={handleSearch}  />
                         <Paper> 
                 {loading ? <ProductLoadingList /> :  <ProductList data={productList} /> }
                          <Box sx={{
