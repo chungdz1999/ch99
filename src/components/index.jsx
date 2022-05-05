@@ -1,7 +1,7 @@
 import React from 'react';
 // import PropTypes from 'prop-types';
 import ProductImg from './ProductImg';
-import Image from './Image';
+import Image1 from './Image1';
 
 HiHi.propTypes = {
     
@@ -49,7 +49,7 @@ function HiHi(props) {
     // 'http://mauweb.monamedia.net/iceCream/wp-content/uploads/2017/11/cute-lover.jpg'
     return (
         <div>
-            <Image />
+            <Image1 />
             <ProductImg product={productList} />
         </div>
     );
