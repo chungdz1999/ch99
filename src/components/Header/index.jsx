@@ -83,7 +83,8 @@ export default function Header() {
 
   const menuId = 'primary-search-account-menu';
   const renderMenu = (
-    <Menu
+ <Box sx={{ display: { xs: 'none'}}}>
+      <Menu
       anchorEl={anchorEl}
       anchorOrigin={{
         vertical: 'top',
@@ -98,9 +99,10 @@ export default function Header() {
       open={isMenuOpen}
       onClose={handleMenuClose}
     >
-      <MenuItem onClick={handleMenuClose}>Profile</MenuItem>
-      <MenuItem onClick={handleMenuClose}>My account</MenuItem>
+      {/* <MenuItem onClick={handleMenuClose}>Profile</MenuItem>
+      <MenuItem onClick={handleMenuClose}>My account</MenuItem> */}
     </Menu>
+ </Box>
   );
 
   const mobileMenuId = 'primary-search-account-menu-mobile';
@@ -191,7 +193,8 @@ export default function Header() {
             />
           </Search> */}
           <Box sx={{ flexGrow: 1 }} />
-          <Box sx={{ display: { xs: 'none', md: 'flex' } }}>
+          {/* <Box sx={{ display: { xs: 'none', md: 'flex'  }  }}> */}
+          <Box sx={{ display: { xs: 'flex', md: 'flex'  }  }}>
             {/* <IconButton size="large" aria-label="show 4 new mails" color="inherit">
               <Badge badgeContent={4} color="error">
                 <MailIcon />
@@ -210,7 +213,6 @@ export default function Header() {
             <Box sx={{
               textAlign: "center",
               fontSize: '25px',
-           
             }}>
               <NavLink to='/' style={{
                 textDecoration: 'none',

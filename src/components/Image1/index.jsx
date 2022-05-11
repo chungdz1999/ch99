@@ -2,6 +2,7 @@ import React from 'react';
 // import PropTypes from 'prop-types';
 import { Box, Container, Grid } from '@mui/material';
 import Image from '../Image';
+import './styles.scss';
 
 Image1.propTypes = {
 
@@ -9,7 +10,7 @@ Image1.propTypes = {
 
 function Image1(props) {
     return (
-        <Box>
+        <Box className='mobile-close'>
             <Container>
                 <Grid container >
                     <Grid item xs={8}>
