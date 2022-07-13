@@ -1,16 +1,23 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Box, Typography } from '@mui/material';
+import { useNavigate } from "react-router-dom";
 
 Product1.propTypes = {
     product: PropTypes.object,
 };
 
 
-
 function Product1({ product }) {
+    let navigate = useNavigate();
+
+
+    const handleClick = () => {
+        navigate(`${product.id}`)
+    };
+
     return (
-        <Box padding={1}  >
+        <Box padding={1} onClick={handleClick} >
             <Box padding={1} minHeight='210px' >
                 <img
                     height='200px'
@@ -24,18 +31,7 @@ function Product1({ product }) {
                     {`${product.price}.000 đ`}
                 </Box>
             </Typography>
-
         </Box>
-
-      
-        //     <Box component="span" fontSize="16px" fontWeight='bold' mr={1} >
-        //     {/* {new Intl.NumberFormat('vi-VN', { style: 'currency', currency: 'VND' }).format(productSP.salePrice)} */}
-        //     {formatPrice(productSP.salePrice)}
-        // </Box>
-
-        // {productSP.promotionPercent > 0 
-        // ? `${productSP.promotionPercent}%` 
-        // : '' }
     );
 }
 

@@ -2,6 +2,7 @@ import React from 'react';
 // import PropTypes from 'prop-types';
 import ProductImg from './ProductImg';
 import Image1 from './Image1';
+// import Scroll from './Scroll';
 
 HiHi.propTypes = {
     
@@ -45,12 +46,49 @@ function HiHi(props) {
             image: 'http://hinhanhdephd.com/wp-content/uploads/2016/01/nhung-hinh-anh-dep-cua-nhung-ly-kem-mat-lanh-4.jpg'
         },
 
+        {
+            id: 6,
+            name: 'socola đá xoay',
+            price: '40.000 đ',
+            image: 'https://quatcafe.vn/public/upload/images/menu_item_icon/mLcMPoWLnE1597678799.png'
+        },
+
+        {
+            id: 7,
+            name: 'matcha đá xoay',
+            price: '45.000 đ',
+            image: 'https://quatcafe.vn/public/upload/images/menu_item_icon/0854kP2AsA1597682670.png'
+        },
+
+        {
+            id: 8,
+            name: 'Trà đào',
+            price: '20.000 đ',
+            image: 'https://quatcafe.vn/public/upload/images/menu_item_icon/DVOJaLSoND1597721100.png'
+        },
+
+        {
+            id: 9,
+            name: 'Đá chanh',
+            price: '25.000 đ',
+            image: 'https://quatcafe.vn/public/upload/images/menu_item_icon/FkamRNKpPq1597678139.png'
+        },
+
+        {
+            id: 10,
+            name: 'Hạt china',
+            price: '50.000 đ',
+            image: 'https://quatcafe.vn/public/upload/images/menu_item_icon/2qoTmYNG4g1597678190.png'
+        },
+
     ]
     // 'http://mauweb.monamedia.net/iceCream/wp-content/uploads/2017/11/cute-lover.jpg'
     return (
         <div>
             <Image1 />
             <ProductImg product={productList} />
+
+            
         </div>
     );
 }

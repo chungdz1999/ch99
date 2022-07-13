@@ -4,6 +4,7 @@ import React, { useEffect, useState } from 'react';
 import productApi from '../../../api/productApi';
 import ProductFilters from '../components/ProductFilters';
 import ProductList from '../components/ProductList';
+import ProductLoadingCategory from '../components/ProductLoadingCategory';
 import ProductLoadingList from '../components/ProductLoadingList';
 import ResearchProductList from '../components/ResearchProductList';
 
@@ -70,7 +71,7 @@ function ListPage(props) {
                 <Grid container spacing={2}>
                     <Grid item xs={2} >
                         <Paper >
-                            <ProductFilters filters={filters} onChange={handleFilterChange}  />
+                {loading ? <ProductLoadingCategory /> : <ProductFilters filters={filters} onChange={handleFilterChange}  /> }     
                         </Paper>
                     </Grid>
                     <Grid item xs={10} >

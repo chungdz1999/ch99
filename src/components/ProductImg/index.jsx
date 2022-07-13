@@ -6,6 +6,8 @@ import { Box, Container, Typography } from '@mui/material';
 import LocalPhoneIcon from '@mui/icons-material/LocalPhone';
 import LocalShippingIcon from '@mui/icons-material/LocalShipping';
 import StorefrontIcon from '@mui/icons-material/Storefront';
+import Scroll from '../Scroll';
+
 
 ProductImg.propTypes = {
     product: PropTypes.array.isRequired,
@@ -13,7 +15,11 @@ ProductImg.propTypes = {
 
 function ProductImg({ product }) {
     return (
-        <Box>
+        <Box 
+        // sx={{
+        //     overflowY: 'hidden',
+        // }}
+        >
                <Box sx={{
                 height: 35,
                 backgroundColor: '#0d6efd',
@@ -73,6 +79,7 @@ function ProductImg({ product }) {
                 </div>
             </div>
 
+
             <Box sx={{
                 height: 35,
                 backgroundColor: '#0d6efd',
@@ -82,6 +89,26 @@ function ProductImg({ product }) {
                     Helloooo!!!!!!! Quí khách
                 </Typography>
             </Box>
+
+            <Box sx={{
+                position: 'fixed',
+                zIndex: 2,
+                bottom: '1vh',
+                backgroundColor: 'pink',
+                color: 'black',
+                right: '2%',
+                borderRadius: '5px',
+
+                '&:hover': {
+                    transition: '0.3s',
+                    color: 'blue',
+                    backgroundColor: 'rgb(21, 101, 192)'
+                }
+
+            }}>
+                <Scroll />
+            </Box>
+
 
         </Box>
     );

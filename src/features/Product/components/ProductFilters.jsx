@@ -19,7 +19,9 @@ function ProductFilters({ filters , onChange }) {
     };
 
     return (
-      <Box>
+      <Box style={{
+        marginTop: '15px'
+      }}>
           <FilterByCategory onChange={handleCategoryChange} />
       </Box>
     );
