@@ -2,6 +2,7 @@ import React from 'react';
 // import PropTypes from 'prop-types';
 import ProductImg from './ProductImg';
 import Image1 from './Image1';
+import { useState } from 'react';
 // import Scroll from './Scroll';
 
 HiHi.propTypes = {
@@ -10,7 +11,7 @@ HiHi.propTypes = {
 
 function HiHi(props) {
 
-    const productList = [
+    const productListPage = [
         {
             id: 1,
             name: 'kem dâu',
@@ -83,6 +84,9 @@ function HiHi(props) {
 
     ]
     // 'http://mauweb.monamedia.net/iceCream/wp-content/uploads/2017/11/cute-lover.jpg'
+    const [productList, setProductList] = useState(productListPage);
+   
+   
     return (
         <div>
             <Image1 />

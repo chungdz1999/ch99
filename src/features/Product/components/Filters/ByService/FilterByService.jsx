@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { Box } from '@mui/material'
 
 FilterByService.propTypes = {
     
@@ -7,9 +8,9 @@ FilterByService.propTypes = {
 
 function FilterByService(props) {
     return (
-        <div>
-            
-        </div>
+       <Box>
+
+       </Box>
     );
 }
 
